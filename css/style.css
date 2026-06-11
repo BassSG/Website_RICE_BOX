@@ -286,18 +286,17 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   width: min(1160px, calc(100% - 36px));
   margin: 0 auto 74px;
 }
 
-.platform-strip span {
+.platform-strip img {
+  width: 148px;
+  height: 54px;
+  object-fit: contain;
   border-radius: var(--radius);
-  padding: 10px 16px;
-  background: white;
-  border: 1px solid var(--line);
-  color: #38443d;
-  font-weight: 700;
+  box-shadow: 0 12px 28px rgba(31, 28, 18, 0.1);
 }
 
 .course-app {
@@ -746,8 +745,30 @@ code {
 }
 
 @media (max-width: 680px) {
+  body {
+    background: #fffdf7;
+  }
+
   .site-header {
+    gap: 10px;
     padding: 12px 14px;
+  }
+
+  .brand {
+    gap: 8px;
+  }
+
+  .brand-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .brand strong {
+    font-size: 14px;
+  }
+
+  .brand small {
+    font-size: 10px;
   }
 
   .header-cta {
@@ -761,10 +782,61 @@ code {
   }
 
   .hero {
-    padding-top: 30px;
+    gap: 18px;
+    padding-top: 22px;
+    padding-bottom: 12px;
   }
 
-  .hero-stats,
+  .hero-copy h1 {
+    font-size: clamp(42px, 15vw, 62px);
+  }
+
+  .hero-lead {
+    margin-bottom: 12px;
+    font-size: clamp(25px, 8vw, 34px);
+  }
+
+  .hero-text {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 18px;
+  }
+
+  .hero-actions button {
+    min-width: 0;
+    padding: 0 10px;
+    font-size: 14px;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .hero-stats div {
+    min-height: 78px;
+    padding: 10px;
+  }
+
+  .hero-stats dt {
+    font-size: 20px;
+  }
+
+  .hero-stats dd {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
   .workflow-grid,
   .faq-grid {
     grid-template-columns: 1fr;
@@ -772,11 +844,180 @@ code {
 
   .hero-media,
   .hero-media img {
-    min-height: 330px;
+    min-height: 250px;
+  }
+
+  .hero-panel {
+    right: 10px;
+    bottom: 10px;
+    width: calc(100% - 20px);
+    padding: 12px;
   }
 
   .platform-strip {
+    flex-wrap: nowrap;
     justify-content: flex-start;
+    width: 100%;
+    margin: 8px 0 38px;
+    overflow-x: auto;
+    padding: 0 18px 8px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .platform-strip::-webkit-scrollbar {
+    display: none;
+  }
+
+  .platform-strip img {
+    flex: 0 0 132px;
+    width: 132px;
+    height: 48px;
+    scroll-snap-align: center;
+  }
+
+  .course-app {
+    width: 100%;
+    padding: 44px 14px;
+  }
+
+  .section-heading {
+    margin-bottom: 18px;
+  }
+
+  .section-heading p,
+  .guide-label {
+    font-size: 13px;
+  }
+
+  .section-heading h2,
+  .guide-card h2 {
+    font-size: 28px;
+    line-height: 1.18;
+  }
+
+  .academy-layout {
+    gap: 12px;
+  }
+
+  .lesson-list,
+  .player-area,
+  .guide-card,
+  .faq details {
+    box-shadow: 0 10px 26px rgba(31, 28, 18, 0.08);
+  }
+
+  .lesson-list {
+    padding: 10px;
+  }
+
+  .progress-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .progress-card strong {
+    margin-top: 0;
+    font-size: 24px;
+  }
+
+  .progress-track {
+    grid-column: 1 / -1;
+  }
+
+  .lesson-buttons {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .lesson-buttons::-webkit-scrollbar {
+    display: none;
+  }
+
+  .lesson-button {
+    flex: 0 0 220px;
+    scroll-snap-align: start;
+  }
+
+  .video-frame {
+    border-radius: var(--radius) var(--radius) 0 0;
+  }
+
+  .video-placeholder h3 {
+    font-size: 27px;
+  }
+
+  .video-placeholder p {
+    font-size: 14px;
+  }
+
+  .lesson-toolbar {
+    padding: 14px;
+  }
+
+  .lesson-toolbar h3 {
+    font-size: 20px;
+  }
+
+  .lesson-tabs {
+    padding: 12px 14px 0;
+  }
+
+  .lesson-detail {
+    padding: 14px;
+  }
+
+  .workflow {
+    width: 100%;
+    padding: 42px 14px;
+  }
+
+  .workflow .section-heading {
+    padding: 0 4px;
+  }
+
+  .workflow-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-bottom: 4px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .workflow-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .workflow-grid article {
+    flex: 0 0 246px;
+    min-height: 220px;
+    scroll-snap-align: start;
+  }
+
+  .video-guide {
+    width: 100%;
+    padding: 8px 14px 46px;
+  }
+
+  .guide-card {
+    gap: 16px;
+    padding: 18px;
+  }
+
+  .guide-card p {
+    font-size: 15px;
+  }
+
+  .faq {
+    width: 100%;
+    padding: 0 14px 54px;
   }
 
   .lesson-toolbar,

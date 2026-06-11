@@ -1,4 +1,4 @@
-const CACHE_NAME = "rice-box-online-v3";
+const CACHE_NAME = "rice-box-online-v4";
 const CORE_ASSETS = [
   "./",
   "./index.html",
@@ -7,7 +7,12 @@ const CORE_ASSETS = [
   "./manifest.webmanifest",
   "./assets/rice-box-hero.png",
   "./assets/app-icon-192.png",
-  "./assets/app-icon-512.png"
+  "./assets/app-icon-512.png",
+  "./assets/platform-lineman.svg",
+  "./assets/platform-grabfood.svg",
+  "./assets/platform-shopeefood.svg",
+  "./assets/platform-foodpanda.svg",
+  "./assets/platform-robinhood.svg"
 ];
 
 self.addEventListener("install", (event) => {

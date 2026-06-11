@@ -1,0 +1,12 @@
+<svg width="220" height="80" viewBox="0 0 220 80" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">Foodpanda</title>
+  <rect width="220" height="80" rx="16" fill="#D70F64"/>
+  <circle cx="50" cy="42" r="24" fill="white"/>
+  <circle cx="39" cy="33" r="7" fill="white"/>
+  <circle cx="61" cy="33" r="7" fill="white"/>
+  <circle cx="42" cy="42" r="3.5" fill="#D70F64"/>
+  <circle cx="58" cy="42" r="3.5" fill="#D70F64"/>
+  <path d="M45 54C48.4 56.3 52.2 56.3 55.5 54" stroke="#D70F64" stroke-width="3" stroke-linecap="round"/>
+  <text x="84" y="36" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="800">food</text>
+  <text x="84" y="58" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="800">panda</text>
+</svg>

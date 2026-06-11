@@ -1,0 +1,8 @@
+<svg width="220" height="80" viewBox="0 0 220 80" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">LineMan</title>
+  <rect width="220" height="80" rx="16" fill="#06C755"/>
+  <circle cx="42" cy="40" r="21" fill="white"/>
+  <path d="M31 38.5L39.5 47L54 32" stroke="#06C755" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="76" y="35" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="800">LINE</text>
+  <text x="76" y="57" fill="white" font-family="Arial, sans-serif" font-size="22" font-weight="800">MAN</text>
+</svg>
