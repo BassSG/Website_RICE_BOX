@@ -17,3 +17,7 @@ videoId: "ABC123"
 เว็บใช้ `youtube-nocookie.com` พร้อม `rel=0` และ `modestbranding=1` เพื่อลดการพาผู้ชมออกจากเว็บเท่าที่ YouTube อนุญาต
 
 ถ้าต้องการควบคุมการดูวิดีโอให้แน่นกว่านี้ แนะนำ Cloudflare Stream, Bunny Stream หรือ Vimeo privacy เพราะรองรับการจำกัดโดเมนและควบคุม player ได้มากกว่า YouTube
+
+## ติดตั้งเป็นแอป
+
+เว็บนี้ตั้งค่าเป็น PWA แล้ว เมื่อเปิดผ่าน GitHub Pages บน Chrome, Edge หรือมือถือที่รองรับ จะสามารถกดติดตั้งเป็นแอปได้ โดยใช้ไอคอนจาก `assets/app-icon-512.png` และไฟล์ `manifest.webmanifest`

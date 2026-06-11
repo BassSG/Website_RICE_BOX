@@ -1,0 +1,32 @@
+{
+  "name": "RICE BOX ONLINE",
+  "short_name": "RICE BOX",
+  "description": "คอร์สเรียนฟรีสำหรับเปิดร้าน BOX Online และใช้ AI ช่วยจัดระบบร้าน",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fffdf7",
+  "theme_color": "#0f8b4c",
+  "categories": ["education", "food", "business"],
+  "icons": [
+    {
+      "src": "assets/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

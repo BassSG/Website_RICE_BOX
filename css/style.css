@@ -69,15 +69,12 @@ a {
   min-width: max-content;
 }
 
-.brand-mark {
-  display: grid;
-  place-items: center;
+.brand-icon {
   width: 42px;
   height: 42px;
+  object-fit: cover;
   border-radius: 8px;
-  background: var(--green);
-  color: white;
-  font: 700 15px "Prompt", sans-serif;
+  box-shadow: 0 8px 18px rgba(8, 98, 55, 0.18);
 }
 
 .brand strong,
@@ -113,6 +110,7 @@ a {
 }
 
 .header-cta,
+.install-cta,
 .primary-btn,
 .ghost-btn,
 .complete-btn,
@@ -125,6 +123,7 @@ a {
 }
 
 .header-cta,
+.install-cta,
 .primary-btn,
 .embed-helper button {
   background: var(--green);
@@ -133,9 +132,19 @@ a {
 }
 
 .header-cta:hover,
+.install-cta:hover,
 .primary-btn:hover,
 .embed-helper button:hover {
   background: var(--green-deep);
+}
+
+.install-cta {
+  background: var(--red);
+  box-shadow: 0 10px 22px rgba(230, 83, 56, 0.16);
+}
+
+.install-cta:hover {
+  background: #c93d26;
 }
 
 .ghost-btn,
@@ -743,6 +752,12 @@ code {
 
   .header-cta {
     display: none;
+  }
+
+  .install-cta {
+    min-height: 40px;
+    padding: 0 12px;
+    font-size: 14px;
   }
 
   .hero {

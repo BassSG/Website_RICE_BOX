@@ -228,4 +228,36 @@ document.querySelector("#embedHelper").addEventListener("submit", (event) => {
   output.innerHTML = `Video ID คือ <code>${id}</code><br>นำไปวางในบทเรียน เช่น <code>videoId: "${id}"</code>`;
 });
 
+let deferredInstallPrompt = null;
+const installAppBtn = document.querySelector("#installAppBtn");
+
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  deferredInstallPrompt = event;
+  if (installAppBtn) {
+    installAppBtn.hidden = false;
+  }
+});
+
+installAppBtn?.addEventListener("click", async () => {
+  if (!deferredInstallPrompt) return;
+  deferredInstallPrompt.prompt();
+  await deferredInstallPrompt.userChoice;
+  deferredInstallPrompt = null;
+  installAppBtn.hidden = true;
+});
+
+window.addEventListener("appinstalled", () => {
+  deferredInstallPrompt = null;
+  if (installAppBtn) {
+    installAppBtn.hidden = true;
+  }
+});
+
+if ("serviceWorker" in navigator && location.protocol !== "file:") {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js").catch(() => {});
+  });
+}
+
 renderApp();

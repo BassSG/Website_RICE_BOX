@@ -19,6 +19,15 @@
       content="ดูคอร์สฟรีในเว็บเดียว เรียนวิธีเปิดร้านข้าวกล่องออนไลน์และใช้ AI ช่วยทำงานประจำวันของร้าน"
     />
     <meta property="og:image" content="assets/rice-box-hero.png" />
+    <meta name="theme-color" content="#0f8b4c" />
+    <meta name="application-name" content="RICE BOX ONLINE" />
+    <meta name="apple-mobile-web-app-title" content="RICE BOX" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/app-icon-32.png" />
+    <link rel="apple-touch-icon" href="assets/app-icon-180.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,7 +39,7 @@
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="RICE BOX ONLINE">
-        <span class="brand-mark">RB</span>
+        <img class="brand-icon" src="assets/app-icon-192.png" alt="" aria-hidden="true" />
         <span>
           <strong>RICE BOX</strong>
           <small>ONLINE</small>
@@ -44,6 +53,7 @@
         <a href="#faq">ถามบ่อย</a>
       </nav>
 
+      <button class="install-cta" type="button" id="installAppBtn" hidden>ติดตั้งแอป</button>
       <button class="header-cta" type="button" data-scroll-target="#course">เริ่มเรียน</button>
     </header>
 
