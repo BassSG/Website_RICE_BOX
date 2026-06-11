@@ -89,7 +89,7 @@ function renderVideo(lesson) {
     <iframe
       src="${embedUrl(lesson.videoId)}"
       title="${lesson.title}"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allow="accelerometer; autoplay; clipboard-write; compute-pressure; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
   `;
