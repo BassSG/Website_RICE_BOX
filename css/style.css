@@ -113,8 +113,7 @@ a {
 .install-cta,
 .primary-btn,
 .ghost-btn,
-.complete-btn,
-.embed-helper button {
+.complete-btn {
   border: 0;
   border-radius: var(--radius);
   min-height: 44px;
@@ -124,8 +123,7 @@ a {
 
 .header-cta,
 .install-cta,
-.primary-btn,
-.embed-helper button {
+.primary-btn {
   background: var(--green);
   color: white;
   box-shadow: 0 10px 22px rgba(15, 139, 76, 0.18);
@@ -133,8 +131,7 @@ a {
 
 .header-cta:hover,
 .install-cta:hover,
-.primary-btn:hover,
-.embed-helper button:hover {
+.primary-btn:hover {
   background: var(--green-deep);
 }
 
@@ -172,9 +169,7 @@ a {
 }
 
 #course,
-#workflow,
-#video-guide,
-#faq {
+#workflow {
   scroll-margin-top: 96px;
 }
 
@@ -303,6 +298,7 @@ a {
   width: min(1240px, calc(100% - 36px));
   margin: 0 auto;
   padding: 74px 0;
+  overflow-x: clip;
 }
 
 .section-heading {
@@ -316,15 +312,13 @@ a {
   text-align: left;
 }
 
-.section-heading p,
-.guide-label {
+.section-heading p {
   margin: 0 0 8px;
   color: var(--red);
   font-weight: 700;
 }
 
-.section-heading h2,
-.guide-card h2 {
+.section-heading h2 {
   margin: 0;
   font: 700 clamp(28px, 4vw, 44px) / 1.18 "Prompt", sans-serif;
 }
@@ -334,12 +328,11 @@ a {
   grid-template-columns: 340px minmax(0, 1fr);
   gap: 18px;
   align-items: start;
+  min-width: 0;
 }
 
 .lesson-list,
-.player-area,
-.guide-card,
-.faq details {
+.player-area {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--paper);
@@ -449,15 +442,21 @@ a {
 
 .player-area {
   overflow: hidden;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .video-frame {
   position: relative;
+  width: 100%;
+  max-width: 100%;
   aspect-ratio: 16 / 9;
   background: #111a15;
+  overflow: hidden;
 }
 
 .video-frame iframe {
+  display: block;
   width: 100%;
   height: 100%;
   border: 0;
@@ -613,90 +612,12 @@ a {
   line-height: 1.7;
 }
 
-.video-guide {
-  width: min(1160px, calc(100% - 36px));
-  margin: 0 auto;
-  padding: 28px 0 74px;
-}
-
-.guide-card {
-  display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
-  gap: 26px;
-  padding: clamp(22px, 4vw, 38px);
-}
-
-.guide-card p {
-  color: var(--muted);
-  line-height: 1.78;
-}
-
 code {
   border-radius: 6px;
   padding: 2px 6px;
   background: #f3efe4;
   color: var(--green-deep);
   font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
-}
-
-.embed-helper {
-  align-self: center;
-  padding: 18px;
-  border-radius: var(--radius);
-  background: var(--soft-green);
-}
-
-.embed-helper label {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: 700;
-}
-
-.helper-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  gap: 8px;
-}
-
-.helper-row input {
-  min-height: 44px;
-  width: 100%;
-  border: 1px solid rgba(15, 139, 76, 0.26);
-  border-radius: var(--radius);
-  padding: 0 12px;
-  background: white;
-}
-
-.embed-helper output {
-  display: block;
-  margin-top: 12px;
-  color: #365144;
-  line-height: 1.6;
-}
-
-.faq {
-  padding: 0 0 76px;
-}
-
-.faq-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.faq details {
-  padding: 18px;
-}
-
-.faq summary {
-  cursor: pointer;
-  font: 700 18px "Prompt", sans-serif;
-}
-
-.faq details p {
-  margin: 12px 0 0;
-  color: var(--muted);
-  line-height: 1.7;
 }
 
 .site-footer {
@@ -720,8 +641,7 @@ code {
   }
 
   .hero,
-  .academy-layout,
-  .guide-card {
+  .academy-layout {
     grid-template-columns: 1fr;
   }
 
@@ -738,8 +658,7 @@ code {
     position: static;
   }
 
-  .workflow-grid,
-  .faq-grid {
+  .workflow-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -837,8 +756,7 @@ code {
     line-height: 1.35;
   }
 
-  .workflow-grid,
-  .faq-grid {
+  .workflow-grid {
     grid-template-columns: 1fr;
   }
 
@@ -879,6 +797,7 @@ code {
   .course-app {
     width: 100%;
     padding: 44px 14px;
+    overflow-x: hidden;
   }
 
   .section-heading {
@@ -886,29 +805,35 @@ code {
   }
 
   .section-heading p,
-  .guide-label {
+  .section-heading p {
     font-size: 13px;
   }
 
-  .section-heading h2,
-  .guide-card h2 {
+  .section-heading h2 {
     font-size: 28px;
     line-height: 1.18;
   }
 
   .academy-layout {
     gap: 12px;
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
   }
 
   .lesson-list,
-  .player-area,
-  .guide-card,
-  .faq details {
+  .player-area {
     box-shadow: 0 10px 26px rgba(31, 28, 18, 0.08);
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
   }
 
   .lesson-list {
+    margin-bottom: 12px;
     padding: 10px;
+    overflow: hidden;
   }
 
   .progress-card {
@@ -931,6 +856,8 @@ code {
     display: flex;
     gap: 8px;
     overflow-x: auto;
+    width: 100%;
+    max-width: 100%;
     padding-bottom: 2px;
     scroll-snap-type: x mandatory;
     scrollbar-width: none;
@@ -947,6 +874,15 @@ code {
 
   .video-frame {
     border-radius: var(--radius) var(--radius) 0 0;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .video-frame iframe {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .video-placeholder h3 {
@@ -1001,33 +937,25 @@ code {
     scroll-snap-align: start;
   }
 
-  .video-guide {
-    width: 100%;
-    padding: 8px 14px 46px;
-  }
-
-  .guide-card {
-    gap: 16px;
-    padding: 18px;
-  }
-
-  .guide-card p {
-    font-size: 15px;
-  }
-
-  .faq {
-    width: 100%;
-    padding: 0 14px 54px;
-  }
-
-  .lesson-toolbar,
-  .helper-row {
+  .lesson-toolbar {
     grid-template-columns: 1fr;
     display: grid;
+    max-width: 100%;
+    overflow: hidden;
   }
 
   .lesson-tabs {
     overflow-x: auto;
+    max-width: 100%;
+    scrollbar-width: none;
+  }
+
+  .lesson-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .lesson-detail {
+    overflow-wrap: anywhere;
   }
 
   .complete-btn {

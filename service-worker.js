@@ -1,4 +1,4 @@
-const CACHE_NAME = "rice-box-online-v4";
+const CACHE_NAME = "rice-box-online-v5";
 const CORE_ASSETS = [
   "./",
   "./index.html",

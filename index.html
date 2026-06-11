@@ -49,8 +49,6 @@
       <nav class="top-nav" aria-label="เมนูหลัก">
         <a href="#course">คอร์สวิดีโอ</a>
         <a href="#workflow">ระบบร้าน</a>
-        <a href="#video-guide">ใส่วิดีโอ</a>
-        <a href="#faq">ถามบ่อย</a>
       </nav>
 
       <button class="install-cta" type="button" id="installAppBtn" hidden>ติดตั้งแอป</button>
@@ -68,7 +66,7 @@
           </p>
           <div class="hero-actions">
             <button class="primary-btn" type="button" data-scroll-target="#course">เริ่มเรียนบทแรก</button>
-            <button class="ghost-btn" type="button" data-scroll-target="#video-guide">ดูวิธีใส่วิดีโอ</button>
+            <button class="ghost-btn" type="button" data-scroll-target="#workflow">ดูระบบร้าน</button>
           </div>
           <dl class="hero-stats" aria-label="ข้อมูลคอร์ส">
             <div>
@@ -169,67 +167,6 @@
         </div>
       </section>
 
-      <section class="video-guide" id="video-guide">
-        <div class="guide-card">
-          <div>
-            <p class="guide-label">วิธีใส่วิดีโอ</p>
-            <h2>ใช้ YouTube แบบ Unlisted ได้ และมีทางเลือกที่ล็อกกว่า</h2>
-            <p>
-              วิธีเร็วสุดคืออัปโหลดวิดีโอขึ้น YouTube เลือกสถานะ <strong>Unlisted</strong>
-              แล้วเอา Video ID มาใส่ในไฟล์ <code>js/app.js</code> ตรงข้อมูลบทเรียน เว็บนี้จะฝังด้วย
-              <code>youtube-nocookie.com</code> และเปิดบทเรียนในตัวเล่นกลางหน้า
-            </p>
-            <p>
-              ถ้าต้องการควบคุมไม่ให้ผู้ชมออกไปแพลตฟอร์มอื่นมากขึ้น แนะนำ Cloudflare Stream,
-              Bunny Stream หรือ Vimeo privacy เพราะควบคุม player, domain restriction และลิงก์ภายนอกได้ดีกว่า YouTube
-            </p>
-          </div>
-
-          <form class="embed-helper" id="embedHelper">
-            <label for="youtubeUrl">ลองแปลงลิงก์ YouTube เป็น Video ID</label>
-            <div class="helper-row">
-              <input
-                id="youtubeUrl"
-                type="url"
-                placeholder="https://www.youtube.com/watch?v=VIDEO_ID"
-                autocomplete="off"
-              />
-              <button type="submit">แปลง</button>
-            </div>
-            <output id="embedOutput">ใส่ลิงก์แล้วระบบจะแสดง ID ที่ต้องนำไปวางในข้อมูลบทเรียน</output>
-          </form>
-        </div>
-      </section>
-
-      <section class="faq section-shell" id="faq">
-        <div class="section-heading">
-          <p>คำถามที่พบบ่อย</p>
-          <h2>ตั้งค่าให้เรียนฟรีแบบเป็นระบบ</h2>
-        </div>
-        <div class="faq-grid">
-          <details open>
-            <summary>YouTube Invisible คืออะไร?</summary>
-            <p>
-              ใน YouTube จะเรียกสถานะนี้ว่า Unlisted หรือไม่เป็นสาธารณะ คนที่มีลิงก์จึงดูได้
-              แต่ไม่ถูกค้นหาเจอง่าย ส่วน Private จะดูได้เฉพาะบัญชีที่ได้รับสิทธิ์เท่านั้น
-            </p>
-          </details>
-          <details>
-            <summary>ผู้ชมจะกดออกไป YouTube ได้ไหม?</summary>
-            <p>
-              ถ้าใช้ YouTube embed ยังมีข้อจำกัดจากตัว player เอง จึงลดการไหลออกได้แต่ปิดทั้งหมดไม่ได้
-              ถ้าต้องการคุมเข้มควรใช้บริการวิดีโอที่รองรับ domain restriction
-            </p>
-          </details>
-          <details>
-            <summary>เพิ่มบทเรียนใหม่ทำยังไง?</summary>
-            <p>
-              เพิ่ม object ใหม่ใน array <code>lessons</code> ของไฟล์ <code>js/app.js</code>
-              ใส่ชื่อบทเรียน เวลา Video ID รายละเอียด prompt และไฟล์ประกอบได้ทันที
-            </p>
-          </details>
-        </div>
-      </section>
     </main>
 
     <footer class="site-footer">

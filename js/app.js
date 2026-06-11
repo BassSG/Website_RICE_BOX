@@ -78,7 +78,7 @@ function renderVideo(lesson) {
       <div class="video-placeholder">
         <div>
           <h3>พร้อมฝังวิดีโอของบทนี้</h3>
-          <p>นำ Video ID จาก YouTube แบบ Unlisted มาใส่ใน <code>js/app.js</code> ตรง <code>videoId</code> ของบทเรียนนี้ แล้วตัวเล่นจะเปลี่ยนเป็นวิดีโอทันที</p>
+          <p>บทเรียนนี้กำลังเตรียมวิดีโอเพิ่มเติม เมื่อพร้อมแล้วตัวเล่นจะแสดงในพื้นที่นี้ทันที</p>
         </div>
       </div>
     `;
@@ -201,31 +201,6 @@ document.querySelectorAll("[data-scroll-target]").forEach((button) => {
   button.addEventListener("click", () => {
     document.querySelector(button.dataset.scrollTarget)?.scrollIntoView({ behavior: "smooth" });
   });
-});
-
-function extractYouTubeId(url) {
-  const patterns = [
-    /youtu\.be\/([a-zA-Z0-9_-]{6,})/,
-    /youtube\.com\/watch\?v=([a-zA-Z0-9_-]{6,})/,
-    /youtube\.com\/embed\/([a-zA-Z0-9_-]{6,})/,
-    /youtube\.com\/shorts\/([a-zA-Z0-9_-]{6,})/
-  ];
-  const match = patterns.map((pattern) => url.match(pattern)).find(Boolean);
-  return match ? match[1] : "";
-}
-
-document.querySelector("#embedHelper").addEventListener("submit", (event) => {
-  event.preventDefault();
-  const url = document.querySelector("#youtubeUrl").value.trim();
-  const id = extractYouTubeId(url);
-  const output = document.querySelector("#embedOutput");
-
-  if (!id) {
-    output.textContent = "ยังอ่าน Video ID ไม่ได้ ลองใช้ลิงก์รูปแบบ https://www.youtube.com/watch?v=VIDEO_ID";
-    return;
-  }
-
-  output.innerHTML = `Video ID คือ <code>${id}</code><br>นำไปวางในบทเรียน เช่น <code>videoId: "${id}"</code>`;
 });
 
 let deferredInstallPrompt = null;
