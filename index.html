@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RICE BOX ONLINE | คอร์สสร้างร้านข้าวกล่องเดลิเวอรีด้วย AI เรียนฟรี</title>
+    <meta name="description" content="คอร์สออนไลน์เรียนฟรี! สอนการเปิดร้านขายข้าวกล่องเดลิเวอรี (LineMan, Grab, ShopeeFood, Foodpanda, Robinhood) และการนำ AI มาช่วยในการบริหารจัดการร้านในชีวิตประจำวัน">
+    <meta name="keywords" content="ข้าวกล่องออนไลน์, RICE BOX, สอนเปิดร้านอาหารเดลิเวอรี, ใช้ AI ทำธุรกิจ, AI คอร์สเรียนฟรี, LineMan, GrabFood, ShopeeFood, Foodpanda, Robinhood">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RICE BOX ONLINE | คอร์สสร้างร้านข้าวกล่องเดลิเวอรีด้วย AI เรียนฟรี">
+    <meta property="og:description" content="เปลี่ยนไอเดียสู่ร้านข้าวกล่องเดลิเวอรีสุดปังบน LineMan, Grab, ShopeeFood, Foodpanda & Robinhood ด้วยผู้ช่วย AI อัจฉริยะ เรียนฟรี 100%">
+    <meta property="og:image" content="https://raw.githubusercontent.com/BassSG/Website_RICE_BOX/main/assets/og-image.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Prompt:wght@300;400;500;600;700&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Local Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Background Gradients -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-glow bg-glow-3"></div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="#" class="logo" id="nav-logo">
+                <span class="logo-accent">RICE BOX</span> ONLINE
+                <span class="logo-badge">AI Power</span>
+            </a>
+            <nav class="nav-menu" id="nav-menu-bar">
+                <a href="#about" class="nav-link">เกี่ยวกับคอร์ส</a>
+                <a href="#platforms" class="nav-link">5 แพลตฟอร์มเดลิเวอรี</a>
+                <a href="#academy" class="nav-link active">ห้องเรียน (Academy)</a>
+                <a href="#ai-assistant" class="nav-link">ทดลองใช้ AI</a>
+                <a href="#faqs" class="nav-link">คำถามที่พบบ่อย</a>
+            </nav>
+            <div class="nav-actions">
+                <div class="progress-indicator-nav">
+                    <span class="progress-text">ความคืบหน้า:</span>
+                    <span id="nav-progress-percent">0%</span>
+                    <div class="progress-bar-nav-bg">
+                        <div class="progress-bar-nav-fill" id="nav-progress-bar-fill"></div>
+                    </div>
+                </div>
+                <button class="btn btn-primary btn-sm" id="btn-start-nav" onclick="document.getElementById('academy').scrollIntoView({behavior: 'smooth'})">
+                    เริ่มเรียนเลย
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="about">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">⚡ คอร์สออนไลน์เรียนฟรี 100%</div>
+                    <h1 class="hero-title">สร้างร้านข้าวกล่องเดลิเวอรี<br><span class="text-gradient">ด้วยพลังสมอง AI</span></h1>
+                    <p class="hero-subtitle">
+                        ซีรีส์สอนปั้นร้านข้าวกล่องเดลิเวอรีสุดปังบน LineMan, Grab, ShopeeFood, Foodpanda และ Robinhood 
+                        สอนใช้เครื่องมือ AI ช่วยคิดเมนู คำนวณต้นทุน ถ่ายภาพโปรโมท และเขียนคำโฆษณาในชีวิตประจำวันได้จริง
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <span class="stat-num">6</span>
+                            <span class="stat-label">บทเรียนหลัก</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">100%</span>
+                            <span class="stat-label">ดูฟรีตลอดชีพ</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">Ready</span>
+                            <span class="stat-label">AI Prompts ก๊อปปี้ใช้ได้เลย</span>
+                        </div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn-primary btn-lg" id="hero-btn-start" onclick="document.getElementById('academy').scrollIntoView({behavior: 'smooth'})">
+                            เข้าสู่ห้องเรียนฟรี
+                        </button>
+                        <a href="#ai-assistant" class="btn btn-secondary btn-lg" id="hero-btn-try-ai">
+                            ทดลองใช้ AI ช่วยคิดเมนู
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="glass-card hero-preview-card">
+                        <div class="card-header-glow"></div>
+                        <div class="preview-image-container">
+                            <svg class="preview-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="50" cy="50" r="45" stroke="url(#paint0_linear)" stroke-width="0.5" stroke-dasharray="2 2"/>
+                                <rect x="30" y="30" width="40" height="40" rx="8" fill="url(#paint1_linear)" stroke="#ff9f43" stroke-width="2"/>
+                                <path d="M40 45 L50 35 L60 45" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <line x1="40" y1="55" x2="60" y2="55" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                <line x1="45" y1="62" x2="55" y2="62" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+                                <defs>
+                                    <linearGradient id="paint0_linear" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#ff9f43"/>
+                                        <stop offset="1" stop-color="#ff5252"/>
+                                    </linearGradient>
+                                    <linearGradient id="paint1_linear" x1="30" y1="30" x2="70" y2="70" gradientUnits="userSpaceOnUse">
+                                        <stop stop-color="#1e272e"/>
+                                        <stop offset="1" stop-color="#0f172a"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="preview-badge">AI Assistant inside</div>
+                        </div>
+                        <div class="preview-info">
+                            <span class="preview-tag">RICE BOX ONLINE SERIES</span>
+                            <h3>เปิดร้านง่ายขึ้น 10 เท่า ด้วยผู้ช่วยอัจฉริยะ</h3>
+                            <div class="preview-meta">
+                                <span>🎯 เน้นทำตามได้จริง</span>
+                                <span>⏱️ รวมความรู้ฉบับย่อ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Integration Section -->
+        <section class="platforms-section" id="platforms">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">บุกตลาดเดลิเวอรี 5 แพลตฟอร์มหลัก</h2>
+                    <p class="section-desc">เรียนรู้วิธีการใช้ AI ในการวิเคราะห์พฤติกรรมลูกค้า ตกแต่งหน้าร้าน และปรับกลยุทธ์การขายให้เหมาะสมกับกฎอัลกอริทึมของแต่ละแอปพลิเคชัน</p>
+                </div>
+                
+                <div class="platforms-grid">
+                    <!-- LineMan Card -->
+                    <div class="glass-card platform-card lineman">
+                        <div class="platform-icon-wrapper">
+                            <div class="platform-logo logo-lineman">LM</div>
+                        </div>
+                        <h3>LINE MAN</h3>
+                        <p class="platform-description">
+                            แอปยอดนิยมของคนไทย เน้นกลุ่มลูกค้าที่ต้องการค่าส่งคุ้มค่าและการแชร์ค่าส่งในไลน์กรุ๊ป
+                        </p>
+                        <div class="platform-ai-tip">
+                            <strong>🤖 AI ช่วยคุณยังไง:</strong> ช่วยเขียนแคปชั่นโปรโมทสั้นๆ โดนๆ สำหรับแชร์ต่อใน LINE กลุ่มหมู่บ้านและคอนโด
+                        </div>
+                    </div>
+
+                    <!-- GrabFood Card -->
+                    <div class="glass-card platform-card grab">
+                        <div class="platform-icon-wrapper">
+                            <div class="platform-logo logo-grab">G</div>
+                        </div>
+                        <h3>GrabFood</h3>
+                        <p class="platform-description">
+                            เจ้าตลาดเดลิเวอรีที่มีกลุ่มลูกค้าหลากหลายและแคมเปญกระตุ้นยอดขายตลอดทั้งวัน
+                        </p>
+                        <div class="platform-ai-tip">
+                            <strong>🤖 AI ช่วยคุณยังไง:</strong> คำนวณราคาขายพ่วงโปรโมชัน (Bundle Menu) และโครงสร้าง GP เพื่อให้ร้านยังมีกำไรสูง
+                        </div>
+                    </div>
+
+                    <!-- ShopeeFood Card -->
+                    <div class="glass-card platform-card shopee">
+                        <div class="platform-icon-wrapper">
+                            <div class="platform-logo logo-shopee">S</div>
+                        </div>
+                        <h3>ShopeeFood</h3>
+                        <p class="platform-description">
+                            ขยายกลุ่มผู้ใช้จากแอปช้อปปิ้งหลัก มีระบบแจกคูปองส่วนลดแบบหนักหน่วง ดึงดูดสายช้อป
+                        </p>
+                        <div class="platform-ai-tip">
+                            <strong>🤖 AI ช่วยคุณยังไง:</strong> วางแผนโปรโมชัน Flash Sale ร่วมกับโค้ดส่วนลดของช้อปปี้เพื่อดึงอันดับร้านขึ้นหน้าแรก
+                        </div>
+                    </div>
+
+                    <!-- Foodpanda Card -->
+                    <div class="glass-card platform-card foodpanda">
+                        <div class="platform-icon-wrapper">
+                            <div class="platform-logo logo-foodpanda">FP</div>
+                        </div>
+                        <h3>Foodpanda</h3>
+                        <p class="platform-description">
+                            โดดเด่นในต่างจังหวัดและกลุ่มลูกค้าที่ชอบการพรีออเดอร์ รวมถึงระบบสมาชิก Pandapro
+                        </p>
+                        <div class="platform-ai-tip">
+                            <strong>🤖 AI ช่วยคุณยังไง:</strong> แปลคำอธิบายเมนูอาหารเป็นภาษาอังกฤษ/ต่างประเทศ รองรับลูกค้าชาวต่างชาติในพื้นที่
+                        </div>
+                    </div>
+
+                    <!-- Robinhood Card -->
+                    <div class="glass-card platform-card robinhood">
+                        <div class="platform-icon-wrapper">
+                            <div class="platform-logo logo-robinhood">R</div>
+                        </div>
+                        <h3>Robinhood</h3>
+                        <p class="platform-description">
+                            แพลตฟอร์มช่วยเหลือคนตัวเล็ก มุ่งส่งเสริมร้านค้ารายย่อยด้วยค่าคอมมิชชั่นที่เป็นมิตร
+                        </p>
+                        <div class="platform-ai-tip">
+                            <strong>🤖 AI ช่วยคุณยังไง:</strong> ช่วยจัดเซ็ต "ข้าวกล่องคุ้มค่า" เพื่อดึงดูดลูกค้าที่สนใจแคมเปญช่วยเหลือร้านค้ารายย่อย
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academy Section (Course Core) -->
+        <section class="academy-section" id="academy">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">RICE BOX ONLINE ACADEMY</span>
+                    <h2 class="section-title">ห้องเรียนหลักสูตรคอร์สสร้างร้านข้าวกล่อง</h2>
+                    <p class="section-desc">คลิกเลือกบทเรียนที่คุณต้องการเรียนจากแถบด้านซ้าย วิดีโอจะเปลี่ยนและเล่นในส่วนเครื่องเล่นหลักทันทีโดยไม่หลุดออกจากเว็บไซต์</p>
+                </div>
+
+                <div class="academy-layout">
+                    <!-- Sidebar: Playlist -->
+                    <aside class="playlist-sidebar glass-card">
+                        <div class="sidebar-header">
+                            <h3>สารบัญบทเรียน</h3>
+                            <span class="lecture-count" id="lecture-count-text">6 บทเรียน</span>
+                        </div>
+                        <div class="playlist-items" id="playlist-container">
+                            <!-- JS Will Render Playlist Items Here -->
+                        </div>
+                    </aside>
+
+                    <!-- Main Area: Player & Tabs -->
+                    <div class="player-container">
+                        <!-- Theater Video Player Wrapper -->
+                        <div class="video-theater-wrapper glass-card">
+                            <div class="video-ratio-box">
+                                <!-- Fallback if no youtube video ID is supplied, or dynamic iframe -->
+                                <div class="player-placeholder" id="video-placeholder-container">
+                                    <div class="placeholder-icon">
+                                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <polygon points="5 3 19 12 5 21 5 3" fill="rgba(255, 159, 67, 0.2)" stroke="#ff9f43"/>
+                                        </svg>
+                                    </div>
+                                    <h3>ยินดีต้อนรับสู่ RICE BOX ONLINE</h3>
+                                    <p>คลิกเลือกบทเรียนด้านซ้ายเพื่อรับชมเนื้อหาและเรียนรู้ไปพร้อมกัน</p>
+                                </div>
+                                <div id="yt-player-iframe" class="youtube-player-iframe hide"></div>
+                            </div>
+                            <!-- Video Controls bar mockup for aesthetics -->
+                            <div class="player-bottom-bar">
+                                <div class="playing-title" id="current-video-title">กำลังรอรับชมบทเรียน...</div>
+                                <div class="player-badge" id="current-video-duration">--:-- นาที</div>
+                            </div>
+                        </div>
+
+                        <!-- Video Related Tabs -->
+                        <div class="video-tabs-wrapper glass-card">
+                            <div class="tab-buttons">
+                                <button class="tab-btn active" data-tab="notes" id="tab-btn-notes">
+                                    📝 โน้ตย่อ & สรุปบทเรียน
+                                </button>
+                                <button class="tab-btn" data-tab="prompts" id="tab-btn-prompts">
+                                    🤖 คลังคำสั่ง AI (Prompts)
+                                </button>
+                                <button class="tab-btn" data-tab="resources" id="tab-btn-resources">
+                                    📂 ดาวน์โหลดเครื่องมือ
+                                </button>
+                            </div>
+                            
+                            <div class="tab-content-container">
+                                <!-- Notes Tab -->
+                                <div class="tab-pane active" id="tab-notes">
+                                    <div class="notes-content" id="notes-content-area">
+                                        <h4>สรุปบทเรียน</h4>
+                                        <p>กรุณาเลือกบทเรียนด้านซ้ายเพื่อดูโน้ตย่อสรุปเนื้อหาสำคัญสำหรับแต่ละบทเรียนแบบละเอียด</p>
+                                    </div>
+                                </div>
+
+                                <!-- Prompts Tab -->
+                                <div class="tab-pane" id="tab-prompts">
+                                    <div class="prompts-intro">
+                                        <p>คำสั่ง AI สำเร็จรูปสำหรับบทนี้ คุณสามารถก๊อปปี้ปุ่มด้านล่างเพื่อนำไปสั่งงาน ChatGPT หรือ Claude ในการสร้างเมนู เขียนโพสต์ หรือคำนวณต้นทุนได้ทันที</p>
+                                    </div>
+                                    <div class="prompts-list" id="prompts-content-area">
+                                        <!-- JS will dynamically populate here -->
+                                        <div class="no-data-prompt">กรุณาเลือกบทเรียนเพื่อใช้งานระบบ AI Prompts</div>
+                                    </div>
+                                </div>
+
+                                <!-- Resources Tab -->
+                                <div class="tab-pane" id="tab-resources">
+                                    <div class="resources-list" id="resources-content-area">
+                                        <!-- JS will dynamically populate here -->
+                                        <div class="resource-item">
+                                            <div class="resource-info">
+                                                <span class="resource-format">PDF</span>
+                                                <div>
+                                                    <h4>คู่มือการเริ่มต้นร้าน RICE BOX ฉบับด่วน</h4>
+                                                    <p>รวมข้อมูลขั้นตอนหลักในการเตรียมร้านและเปิดเพจเดลิเวอรีเบื้องต้น</p>
+                                                </div>
+                                            </div>
+                                            <a href="#" class="btn btn-secondary btn-sm" onclick="alert('คู่มืออยู่ระหว่างจัดเตรียม จะพร้อมเปิดให้ดาวน์โหลดเร็วๆ นี้ครับ!'); return false;">ดาวน์โหลด</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Assistant Preview Widget -->
+        <section class="ai-assistant-section" id="ai-assistant">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">AI INTERACTIVE PLAYGROUND</span>
+                    <h2 class="section-title">ลองทดสอบผู้ช่วย AI ของคุณ</h2>
+                    <p class="section-desc">ลองคลิกเลือกคำสั่งที่อยากใช้ด้านล่าง เพื่อดูตัวอย่างการตอบกลับจริงของ AI ว่าสามารถช่วยคุณคิดเมนู คำนวณราคา หรือคิดแคปชั่นร้านข้าวกล่องได้อย่างไรบ้าง</p>
+                </div>
+
+                <div class="ai-simulator-grid">
+                    <div class="glass-card ai-prompts-selector">
+                        <h3>เลือกงานที่อยากให้ AI ช่วย</h3>
+                        <div class="prompt-templates-list">
+                            <button class="prompt-select-btn active" data-simulator-prompt="menu">
+                                🍱 คิดเมนูข้าวกล่องเด็ด + วัตถุดิบ
+                            </button>
+                            <button class="prompt-select-btn" data-simulator-prompt="caption">
+                                ✍️ เขียนแคปชั่นโปรโมท LineMan/Grab
+                            </button>
+                            <button class="prompt-select-btn" data-simulator-prompt="gp">
+                                📊 คำนวณต้นทุน/ราคาขายส่งเดลิเวอรี
+                            </button>
+                            <button class="prompt-select-btn" data-simulator-prompt="review">
+                                💬 ตอบรีวิวลูกค้าที่ตำหนิเรื่องส่งช้า
+                            </button>
+                        </div>
+                        <div class="simulator-prompt-display">
+                            <strong>คำสั่งที่จะใช้ส่งให้ AI:</strong>
+                            <div class="prompt-display-text" id="simulator-prompt-text">
+                                "...กำลังโหลดข้อมูล..."
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-block" id="btn-run-simulator">
+                            🚀 ส่งคำสั่งให้ AI ประมวลผล
+                        </button>
+                    </div>
+
+                    <div class="glass-card ai-chat-interface">
+                        <div class="chat-header">
+                            <div class="chat-avatar">🤖</div>
+                            <div class="chat-title-info">
+                                <h4>RICE BOX AI Assistant</h4>
+                                <span>พร้อมทำงานในชีวิตประจำวันของคุณ</span>
+                            </div>
+                        </div>
+                        <div class="chat-body" id="chat-simulator-body">
+                            <div class="chat-message ai">
+                                <div class="message-bubble">
+                                    สวัสดีครับ! ผมคือผู้ช่วย AI ร้านข้าวกล่องออนไลน์ของคุณ ลองกดปุ่ม <strong>"ส่งคำสั่งให้ AI ประมวลผล"</strong> ทางซ้ายมือได้เลยครับ เพื่อให้ผมช่วยสร้างไอเดียหรือแก้ไขปัญหาให้กับร้านของคุณครับ
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQs Section -->
+        <section class="faqs-section" id="faqs">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">คำถามที่พบบ่อย (FAQs)</h2>
+                    <p class="section-desc">ไขข้อสงสัยเกี่ยวกับการสร้างคอร์ส การนำวิดีโอมาลง และการเรียนรู้การใช้ AI ร่วมกับร้านข้าวกล่อง</p>
+                </div>
+                
+                <div class="faqs-list">
+                    <div class="faq-item glass-card">
+                        <div class="faq-question" id="faq-q1">
+                            <h3>1. วิดีโอบนเว็บไซต์นี้ดูฟรีจริงหรือไม่?</h3>
+                            <span class="faq-toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>คอร์สนี้เปิดสอนฟรี 100% ไม่มีค่าใช้จ่ายแอบแฝง จุดประสงค์คือการแบ่งปันความรู้การทำธุรกิจข้าวกล่องเดลิเวอรีให้ทุกคนสามารถนำไปตั้งตัวได้จริงผ่านพลังของ AI ครับ</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-card">
+                        <div class="faq-question" id="faq-q2">
+                            <h3>2. การลงวิดีโอแบบไม่แสดงต่อสาธารณะ (Unlisted) ของ YouTube ดึงมาใช้ในเว็บอย่างไร?</h3>
+                            <span class="faq-toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>ผู้สอนสามารถอัปโหลดวิดีโอขึ้น YouTube แล้วกำหนดค่าความเป็นส่วนตัวเป็น "ไม่แสดงรายการ (Unlisted)" จากนั้นนำ Video ID มากำหนดไว้ในระบบเว็บไซต์นี้ วิดีโอจะแสดงผลให้ผู้เรียนดูผ่านเว็บได้เท่านั้น โดยไม่ต้องกลัวว่าคลิปจะรั่วไหลหรือหลุดออกไปข้างนอกอย่างไม่ตั้งใจครับ</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-card">
+                        <div class="faq-question" id="faq-q3">
+                            <h3>3. นอกจากดูวิดีโอแล้ว ในเว็บมีเครื่องมืออะไรช่วยผู้เรียนอีกบ้าง?</h3>
+                            <span class="faq-toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>ในแต่ละบทเรียนจะมีคลังคำสั่ง AI (Prompts) ที่ผ่านการทดสอบมาแล้วว่าใช้งานได้จริง คุณสามารถคลิกคัดลอก (Copy) แล้วนำไปปรับใช้สั่ง AI ในโทรศัพท์หรือคอมพิวเตอร์ของคุณเองได้ทันที รวมถึงมีเทมเพลตและไฟล์ต่างๆ ให้ดาวน์โหลดเพื่ออำนวยความสะดวกด้วยครับ</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item glass-card">
+                        <div class="faq-question" id="faq-q4">
+                            <h3>4. ร้านข้าวกล่องของฉันจำเป็นต้องลงทะเบียนครบทั้ง 5 แพลตฟอร์มหรือไม่?</h3>
+                            <span class="faq-toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>ไม่จำเป็นครับ ในช่วงเริ่มต้นคุณสามารถเริ่มจาก 1-2 แพลตฟอร์มหลักในพื้นที่ของคุณก่อน (เช่น LINE MAN หรือ Grab) แล้วค่อยขยายไปยังแพลตฟอร์มอื่นๆ เมื่อระบบในครัวและแรงงานเริ่มนิ่งแล้วครับ</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-accent">RICE BOX</span> ONLINE
+                </a>
+                <p>เรียนรู้วิธีปั้นร้านข้าวกล่องเดลิเวอรีให้เติบโตด้วยเทคโนโลยี AI ในยุคใหม่</p>
+            </div>
+            <div class="footer-links">
+                <h4>การเข้าถึงด่วน</h4>
+                <ul>
+                    <li><a href="#about">เกี่ยวกับเรา</a></li>
+                    <li><a href="#platforms">ช่องทางเดลิเวอรี</a></li>
+                    <li><a href="#academy">บทเรียนทั้งหมด</a></li>
+                    <li><a href="#ai-assistant">ทดลองเครื่องมือ AI</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>RICE BOX ONLINE</h4>
+                <p>สร้างสรรค์เว็บสำหรับร้านข้าวกล่องยุคใหม่</p>
+                <div class="social-icons">
+                    <!-- Facebook Icon -->
+                    <a href="#" class="social-icon" aria-label="Facebook">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                    </a>
+                    <!-- YouTube Icon -->
+                    <a href="#" class="social-icon" aria-label="YouTube">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.163c-.272-1.016-1.07-1.815-2.085-2.087-1.848-.495-9.413-.495-9.413-.495s-7.565 0-9.412.495c-1.017.272-1.814 1.071-2.086 2.087-.495 1.847-.495 5.705-.495 5.705s0 3.859.495 5.706c.272 1.015 1.07 1.813 2.086 2.085 1.847.497 9.412.497 9.412.497s7.565 0 9.413-.497c1.015-.272 1.813-1.07 2.085-2.085.495-1.847.495-5.706.495-5.706s0-3.858-.495-5.705zm-14.398 9.337v-9l7.794 4.5-7.794 4.5z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 RICE BOX ONLINE. All Rights Reserved. ออกแบบอย่างพรีเมียมเพื่อร้านข้าวกล่องเดลิเวอรี</p>
+                <p>คอร์สเพื่อสาธารณประโยชน์สำหรับผู้ประกอบการรายย่อย</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>
